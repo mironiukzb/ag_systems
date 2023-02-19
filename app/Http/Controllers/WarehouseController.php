@@ -49,6 +49,6 @@ class WarehouseController extends Controller
     {
         return $warehouse->delete()
         ? response()->noContent() 
-        : $this->responseWithMessage("Something went wrong.", 500);
+        : response()->json("Something went wrong.", 500);
     }
 }

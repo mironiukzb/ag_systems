@@ -38,7 +38,6 @@ Route::group(['prefix' => 'warehouses'], function () {
 
 
 Route::group(['prefix' => 'warehouse_items'], function () {
-    Route::get('/{warehouseItem}', [WarehouseItemController::class, 'show'])->name('warehouse_items.show');
     Route::post('', [WarehouseItemController::class, 'store'])->name('warehouse_items.store');
     Route::put('/{warehouseItem}', [WarehouseItemController::class, 'update'])->name('warehouse_items.update');
     Route::delete('{warehouseItem}', [WarehouseItemController::class, 'destroy'])->name('warehouse_items.destroy');

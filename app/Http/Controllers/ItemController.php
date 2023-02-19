@@ -55,6 +55,6 @@ class ItemController extends Controller
     {
         return $item->delete()
             ? response()->noContent() 
-            : $this->responseWithMessage("Something went wrong.", 500);
+            : response()->json("Something went wrong.", 500);
     }
 }
