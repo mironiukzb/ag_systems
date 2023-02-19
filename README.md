@@ -39,3 +39,19 @@ php artisan migrate
 
 ```
 
+
+Run app
+
+```bash
+
+php artisan serve
+
+```
+
+Your app shoud be available on 
+
+```url 
+
+localhost:8000
+
+```
