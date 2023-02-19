@@ -28,14 +28,17 @@ class Item extends Model
     {
         $array = parent::toArray();
 
-        //dd($array);
-
         return [
             'id' => $array['id'] ?? $this->id,
             'name' => $array['name'] ?? $this->name,
-            'price' => $array['price'] ?? $this->price
-            
+            'price' => $array['price'] ?? $this->price,
+            'warehouses' => $this->warehouses()?->toArray(),
         ];
+    }
+
+    public function warehouses()
+    {
+        return WarehouseItem::select(['warehouse_id', 'amount'])->where('item_id', $this->id)->get();
     }
 
     public function warehouseItems() {
