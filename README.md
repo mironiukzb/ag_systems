@@ -48,7 +48,7 @@ php artisan serve
 
 ```
 
-Your app shoud be available on 
+Your app should be available on 
 
 ```url 
 
